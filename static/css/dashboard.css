@@ -1,0 +1,321 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    /* background-color: royalblue; */
+    color: royalblue !important;
+    text-align: right;
+    margin: 0;
+    padding: 20px;
+    font-weight: bold !important;
+}
+.side{
+    width: 200px;
+    background-color: #1a55e3;
+    height: 96vh;
+    margin: 2vh;
+    border-radius: 10px;
+    top: 0px;
+    position: fixed;
+}
+.side i{
+    margin: 0 15px 0 22px;
+}
+.side-block{
+    width: 140px;
+    height: 40px;
+    margin: 30px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+.side-block:hover{
+    transform: translateX(7px);
+}
+.side a{
+    color: royalblue;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.active{
+    background-color: #ff0854;
+    color: white;
+}
+.heading{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline #ff0854;
+}
+.applist{
+    margin:0 30px 0 250px !important;
+}
+.app-container{
+    padding: 30px 30px 5px !important;
+    transition: all 0.3s;
+}
+.apps{
+    background-color: rgb(149, 43, 255);
+    border-radius: 10px;  
+    padding: 20px;  
+    color: white;
+}
+.app-container:hover{
+    transform: translateY(-5px);
+}
+.apps img{
+    width: 90%;
+    aspect-ratio: 1;
+    border-radius: 10px !important;
+}
+.apps h3{
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.apps h1{
+    font-weight: bolder;
+    font-size: 55px;
+    margin: 0;
+}
+.apps span{
+    margin-top: 10px !important;
+}
+.apps a{
+    color: aquamarine;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+.cata{
+    background-color: rgba(255, 255, 255, 0.202);
+    margin: auto 7px 0 0;
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+.down{
+    margin-top: 12px;
+}
+
+/* Add App */
+
+.add-app label{
+    color: red;
+    width: 150px;
+}
+.add-app input{
+    width: 250px !important;
+}
+.add-app select{
+    width: 250px !important;
+    height: 30px;
+}
+.add-app button{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Profile */
+
+.profile-table img{
+    width: 200px;
+}
+.profile-table h1{
+    font-weight: bold;
+    margin-top: 50px;
+}   
+.profile-table section .about-cont{
+    margin: 40px 0;
+    display: flex;
+    border: 2px solid #ff0854;
+    border-radius: 10px;
+}
+.profile-table section .about-cont .head{
+    padding: 13px 0px 13px 20px;
+    width: 120px !important;
+    background-color: #ff0854;
+    color: white;
+    border-radius: 10px 0 0 10px !important; 
+}
+.profile-table section .data{  
+    display: flex;
+    align-items: center;
+    padding: 13px 10px;
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: #1a55e3 !important;
+    min-width: 300px;
+}
+
+/* Task (Screenshot Upload) */
+
+.app-info img{
+    width: 200px;
+    border-radius: 10px;
+    animation-name: logo;
+    animation-iteration-count: 1;
+    animation-duration: 0.7s;
+}
+.app-info h3{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 40px;
+    animation-name: heading;
+    animation-iteration-count: 1;
+    animation-duration: 1.3s;
+}
+.app-info a{
+    text-decoration: none;
+    color: gray;
+    animation-name: heading2;
+    animation-iteration-count: 1;
+    animation-duration: 1.7s;
+}
+.app-info .cata{
+    background-color: rgba(0, 0, 0, 0.202);
+    animation-name: heading3;
+    animation-iteration-count: 1;
+    animation-duration: 1.9s;
+}
+.app-info h1{
+    font-size: 70px;
+    font-weight: bold;
+    color: #ff0854;
+    margin: 50px 0 0;
+    animation-name: points;
+    animation-iteration-count: 1;
+    animation-duration: 2.1s;
+}
+.app-info span{
+    animation-name: points2;
+    animation-iteration-count: 1;
+    animation-duration: 2.5s;
+}
+.drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 70%;
+    height: 340px;
+    margin: 50px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.drop-area.drop {
+    background-color: #f9f9f9;
+}
+.upload-btn{
+    width: 70%;
+    text-align: center;
+    font-weight: bold !important;
+}
+.upload-btn button{
+    font-weight: bold !important;
+    width: 100px;
+}
+.back-btn a{
+    position: fixed;
+    font-size: 30px;
+    color: #1a55e3;
+    top: 30px;
+    transition: all 0.2s;
+}
+.back-btn a:hover{
+    transform: translateX(-5px);
+}
+@keyframes logo {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      
+    }
+}
+@keyframes heading {
+    0% {
+      transform: translateY(-60px);
+      opacity: 0;
+    }
+    60% {
+        transform: translateY(-60px);
+        opacity: 0;
+      }
+    100% {
+      
+    }
+}
+@keyframes heading2 {
+    0% {
+      transform: translateY(-60px);
+      opacity: 0;
+    }
+    70% {
+        transform: translateY(-60px);
+        opacity: 0;
+      }
+    100% {
+      
+    }
+}
+@keyframes heading3 {
+    0% {
+      transform: translateY(-60px);
+      opacity: 0;
+    }
+    80% {
+        transform: translateY(-60px);
+        opacity: 0;
+      }
+    100% {
+      
+    }
+}
+@keyframes points {
+    0% {
+      transform: translateY(-60px);
+      opacity: 0;
+    }
+    80% {
+        transform: translateY(-60px);
+        opacity: 0;
+      }
+    100% {
+      
+    }
+}
+@keyframes points2 {
+    0% {
+      opacity: 0;
+    }
+    80% {
+        opacity: 0;
+      }
+    100% {
+      
+    }
+}
+
+/* Points */
+
+.table-points{
+    width: 400px !important;
+}
+.t-points{
+    border-right: 2px solid #1a55e3;
+}
+.t-points h4{
+    color: #1a55e3;
+}
+.t-points h1{
+    color: #ff0854;
+    font-size: 120px;
+    font-weight: bolder
+}
+.table-tasks{
+    width: 80% !important;
+}
+.table-tasks .screenshot{
+    width: 40px;
+    border-radius: 5px;
+}

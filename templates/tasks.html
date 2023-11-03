@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Completed</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h2>Hello {{ user_data.name }}</h2>
+    <div class="side">
+        <a href="{% url 'dashboard' %}"><div class="side-block"><i class="fa-solid fa-house"></i>Home</div></a>
+        <a href="{% url 'profile' %}"><div class="side-block"><i class="fa-solid fa-user"></i>Profile</div></a>
+        <a href="{% url 'points' %}"><div class="side-block"><i class="fa-solid fa-star"></i>Points</div></a>
+        <a href="{% url 'tasks' %}"><div class="side-block active"><i class="fa-solid fa-bars-progress"></i>Tasks</div></a>
+        <a href="{% url 'logout' %}"><div class="side-block"><i class="fa-solid fa-right-from-bracket"></i>Logout</div></a>
+    </div>
+    <div class="applist">
+        <h1 class="heading">Completed Tasks</h1><br><br>
+        <div class="row">
+            <div class="text-center d-flex justify-content-center">
+                <table class="table table-hover text-center table-tasks">
+                    <thead>
+                        <tr>
+                            <th>Logo</th>
+                            <th>App Name</th>
+                            <th>Points</th>
+                            <th>Screenshot</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for app_task in app_tasks %}
+                        <tr>
+                            <td><img src="{{ app_task.aid.app_pic.url }}" alt="" class="screenshot"></td>
+                            <td>{{ app_task.aid }}</td>
+                            <td>{{ app_task.aid.points }}</td>
+                            <td><img src="{{ app_task.screenshot.url }}" alt="" class="screenshot"></td>
+                            <td><a href="{{ app_task.screenshot.url }}"><div class="btn btn-primary">view</div></a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

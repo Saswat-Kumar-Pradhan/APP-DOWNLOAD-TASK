@@ -1,0 +1,114 @@
+Android App Download Task - Documentation
+
+Project Overview ------
+
+    Project Name: Android App Download Task
+    Author: Saswat Kumar
+    Language: Python
+    Framework: Django (Frontend and Backend)
+    Frontend: HTML, CSS, Bootstrap
+    Backend: Python (Django)
+    Authentication: Custom Authentication using cookies
+    Session Management: Django Sessions
+
+Project Description ------
+
+    The "Android App Download Task" project is a web application that allows users to download Android applications with the provided link. It provides a user-friendly interface to complete the task by uploading the proof which is screenshot of the opened application.After completing the task user scores the point which was fixed by the admin.
+
+Features ------
+
+    User Authentication:
+
+        Users can create accounts and log in to download and complete the tasks to score points.
+        Custom authentication (using cookies) system is used for user management.
+
+    App Listings:
+
+        Apps are added with points by the admin based on their type and sub-type.
+        Users can browse and view details of each app and download the app to gain points.
+
+    Download Functionality:
+
+        Authenticated users can download apps to their devices and upload the screenshot to complete the task.
+
+    Responsive Design:
+
+        Bootstrap framework is implemented for responsive user interface.
+
+Project Structure ------
+
+    PROBLEM SET 2/
+    ├── app/
+    │   ├── admin.py
+    │   ├── forms.py
+    │   ├── models.py
+    │   ├── views.py
+    │   └── ...
+    ├── static/
+    │   ├── css/
+    │   └── ...
+    ├── templates/
+    │   └── ...
+    ├── media/
+    │   └── ...
+    ├── main/
+    │   ├── settings.py
+    │   ├── urls.py
+    │   ├── wsgi.py
+    │   └── ...
+    ├── manage.py
+    └── db.sqlite3
+
+Installation and Setup ------
+
+    1. Clone the Repository
+
+            git clone https://gitlab.com/saswatkumar059/django-evaluation-task.git
+
+    3. Go to the project directory:
+
+        cd problem set 2
+
+    3. Create a Virtual Environment:
+
+        python3 -m venv env
+
+    4. Activate the Virtual Environment:
+
+        env\Scripts\activate     (in windows)
+        source env/bin/activate  (in Linux/macOS)
+
+    5. Install Dependencies:
+
+        pip install -r requirements.txt
+
+    6. Apply Migrations:
+
+        python3 manage.py migrate
+
+    7. Run the Development Server:
+
+        python3 manage.py runserver
+
+Usage ------
+
+    1. User Registration and Login:
+
+        Users can create accounts or log in if they already have one.
+
+    2. Create Task:
+
+        Admin user can add an android app as well as the number of points - earned by user for downloading the app.
+    
+    3. Complete the TASK:
+
+        Users can download the app to complete the task (Upload the screenshot for proof).
+    
+    4. User Details:
+
+        Users can see his/her profile as well as total point earned and the list of all completed tasks.
+
+Conclusion ------
+
+    The "Android App Download Task" project provides a user-friendly platform for users to download Android applications and complete the prospective tasks. With authentication and session management, it ensures secure access and interaction with the platform. The responsive design ensures a seamless experience on multiple devices.
+
