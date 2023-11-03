@@ -2,7 +2,7 @@
 
 <div align="right">
 
-[Watch the Screeccast Here](https://gitlab.com/saswatkumar059/django-evaluation-task/-/raw/main/Screencast_for_Django_Evaluation.webm?ref_type=heads)
+[Watch the Screeccast Here](https://github.com/Saswat-Kumar-Pradhan/APP-DOWNLOAD-TASK/blob/main/screencast%20of%20app-download-task.mp4)
 
 </div>
 
